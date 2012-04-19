@@ -1,8 +1,11 @@
 SampleApp::Application.routes.draw do
+  
+
   match '/about' => 'staticpages#about', :as => :about
   match '/help'  => 'staticpages#help' , :as => :help
   match '/contact' => 'staticpages#contact', :as => :contact
   match '/' => 'staticpages#home', :as => :home
+  match '/signup' => 'users#new', :as=> :signup
   #resources :staticpages
 
   # The priority is based upon order of creation:
