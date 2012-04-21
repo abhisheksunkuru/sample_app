@@ -8,6 +8,8 @@ gem 'rails', '3.2.3'
  gem 'rspec-rails'
  gem 'guard-rspec'
  gem 'bootstrap-sass'
+ #gem 'annotate'
+ gem 'bcrypt-ruby'
 
 
 # Gems used only for assets and not required
