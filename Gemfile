@@ -35,6 +35,8 @@ gem 'guard-spork'
 gem 'spork'
 gem 'pg'
 gem 'debugger'
+gem "rack-ssl"
+gem 'passenger'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
