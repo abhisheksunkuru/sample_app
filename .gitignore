@@ -21,4 +21,4 @@ doc/
 .DS_Store
 bundler_stubs/
 #ignore nbproject
-/nbproject/**/*
+/nbproject
