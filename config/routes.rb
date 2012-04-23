@@ -1,11 +1,13 @@
 SampleApp::Application.routes.draw do
-  
+ resources:users  
 
   match '/about' => 'staticpages#about', :as => :about
   match '/help'  => 'staticpages#help' , :as => :help
   match '/contact' => 'staticpages#contact', :as => :contact
   match '/' => 'staticpages#home', :as => :home
   match '/signup' => 'users#new', :as=> :signup
+  post '/users' => 'users#create'
+  get '/users/:id' => 'users#show'
   #resources :staticpages
 
   # The priority is based upon order of creation:

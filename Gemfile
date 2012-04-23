@@ -10,6 +10,7 @@ gem 'rails', '3.2.3'
  gem 'bootstrap-sass'
  #gem 'annotate'
  gem 'bcrypt-ruby'
+ gem 'factory_girl_rails'
 
 
 # Gems used only for assets and not required
@@ -33,6 +34,7 @@ gem 'libnotify'
 gem 'guard-spork'
 gem 'spork'
 gem 'pg'
+gem 'debugger'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
