@@ -36,8 +36,6 @@ gem 'guard-spork'
 gem 'spork'
 gem 'pg'
 gem 'debugger'
-gem "rack-ssl"
-gem 'passenger'
 
 gem "database_cleaner"
 

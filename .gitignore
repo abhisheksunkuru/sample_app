@@ -22,3 +22,4 @@ doc/
 bundler_stubs/
 #ignore nbproject
 /nbproject
+/config/database.yml
