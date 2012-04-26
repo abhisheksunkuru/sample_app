@@ -34,10 +34,13 @@ gem 'rb-inotify'
 gem 'libnotify'
 gem 'guard-spork'
 gem 'spork'
-gem 'pg'
+
 gem 'debugger'
 
 gem "database_cleaner"
+group :production do
+	gem 'pg'
+end	
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
