@@ -70,7 +70,7 @@ describe "StaticPages" do
       click_link "contact"
       page.should have_selector 'title', :text => full_title('Contact')
 
-      click_link "home"
+      click_link "Home"
       page.should have_selector  'title', :text => full_title('')
 
       click_link "SignUp Now"
