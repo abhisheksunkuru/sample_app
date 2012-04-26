@@ -27,16 +27,17 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'libnotify'
 
+group :development do
+gem 'debugger'
 gem 'therubyracer'
 gem 'capybara'
 gem 'rb-inotify'
-gem 'libnotify'
+
 gem 'guard-spork'
 gem 'spork'
-
-gem 'debugger'
-
+end
 gem "database_cleaner"
 group :production do
 	gem 'pg'
