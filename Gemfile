@@ -27,20 +27,21 @@ group :assets do
 end
 
 
+gem 'bcrypt-ruby'
 
 group :development do
 gem 'debugger'
 gem 'therubyracer'
 gem 'capybara'
 gem 'rb-inotify'
-gem 'bcrypt-ruby'
 gem 'guard-spork'
 gem 'spork'
 gem 'jquery-rails'
 gem 'libnotify'
-
 end
+
 gem "database_cleaner"
+
 group :production do
 	gem 'pg'
 end	
