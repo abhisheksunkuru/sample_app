@@ -9,7 +9,7 @@ group :test do
  gem 'guard-rspec'
  
  #gem 'annotate'
- gem 'bcrypt-ruby'
+ 
  gem 'factory_girl_rails'
 gem "cucumber-rails"
 end
@@ -33,7 +33,7 @@ gem 'debugger'
 gem 'therubyracer'
 gem 'capybara'
 gem 'rb-inotify'
-
+gem 'bcrypt-ruby'
 gem 'guard-spork'
 gem 'spork'
 gem 'jquery-rails'
