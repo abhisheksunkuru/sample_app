@@ -26,8 +26,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-gem 'libnotify'
+
 
 group :development do
 gem 'debugger'
@@ -37,6 +36,9 @@ gem 'rb-inotify'
 
 gem 'guard-spork'
 gem 'spork'
+gem 'jquery-rails'
+gem 'libnotify'
+
 end
 gem "database_cleaner"
 group :production do
