@@ -4,46 +4,54 @@ gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-group :test do
- gem 'rspec-rails'
- gem 'guard-rspec'
+group :test ,:development do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'capybara'
+  gem 'launchy'
  
- #gem 'annotate'
- 
- gem 'factory_girl_rails'
-gem "cucumber-rails"
+  #gem 'annotate'
+  gem 'spork'
+  gem 'factory_girl_rails'
 end
+
+group :test do
+  gem "cucumber-rails"
+end	
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
-
+  gem 'jquery-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
+
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 gem 'bcrypt-ruby'
 
 group :development do
 gem 'debugger'
 gem 'therubyracer'
-gem 'capybara'
+
 gem 'rb-inotify'
 gem 'guard-spork'
-gem 'spork'
-gem 'jquery-rails'
+
+
 gem 'libnotify'
 end
 
 gem "database_cleaner"
 
 group :production do
-	gem 'pg'
+  gem 'pg'
 end	
 
 # To use ActiveModel has_secure_password
