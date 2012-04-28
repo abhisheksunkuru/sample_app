@@ -74,6 +74,19 @@ describe "Authentication" do
           it "should render the desired protected page" do
             page.should have_selector('title', text: 'Edit user')
           end 
+
+          describe "when signin again" do
+            before  do
+              visit signin_path
+              fill_in "Email", with: user.email
+              fill_in "Password", with: user.password
+              click_button "Sign in"
+            end  
+            
+            it "should render the deafault(home) page" do
+              page.should have_selector('title', text: user.name)              
+            end 
+          end
         end
       end 
 
@@ -106,5 +119,11 @@ describe "Authentication" do
         specify {response.should redirect_to(home_path)}
       end
     end  
-  end  
+  end 
+  describe "when user not sign_in" do
+    let(:user) {FactoryGirl.create(:user)}
+    it{should_not have_link('Profile', href: edit_user_path(user))}
+    it{should_not have_link('Settings', href: '#')}
+  end    
+
 end
