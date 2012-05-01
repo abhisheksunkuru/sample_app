@@ -1,0 +1,12 @@
+<li>
+	<span class="content">
+
+		<%= micropost.content %>
+	</span>
+	<span class="timestamp">
+		posted<%= time_ago_in_words(micropost.created_at) %>ago
+	</span>
+	<% if current_user?(micropost.user) %>
+	  <%= render 'shared/deletelink' %>
+	<% end %>  
+</li>		
