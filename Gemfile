@@ -12,7 +12,7 @@ group :test ,:development do
  
   #gem 'annotate'
   gem 'spork'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', :require => false
 end
 
 group :test do

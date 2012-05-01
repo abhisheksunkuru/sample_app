@@ -1,6 +1,13 @@
 SampleApp::Application.routes.draw do
- resources:users
+  get "microposts/index"
+
+  get "microposts/create"
+
+  get "microposts/destroy"
+
+ resources :users
  resources :sessions, only: [:new, :create, :destroy]  
+ resources :microposts, only: [:create, :destroy]
 
   match '/about' => 'staticpages#about', :as => :about
   match '/help'  => 'staticpages#help' , :as => :help
@@ -63,7 +70,7 @@ SampleApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'staticpages#home'
 
   # See how all your routes lay out with "rake routes"
 

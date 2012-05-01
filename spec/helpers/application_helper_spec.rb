@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'factory_girl_rails'
+
 
 describe ApplicationHelper do
   describe "full_title" do
