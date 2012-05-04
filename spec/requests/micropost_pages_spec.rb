@@ -11,6 +11,7 @@ describe "MicropostPages" do
 
  	describe "with invalid information" do
  		it "should not create a micropost" do
+      
  			expect {click_button "Post"}.should_not change(Micropost, :count)
  		end
 
@@ -37,7 +38,8 @@ describe "MicropostPages" do
       before { visit root_path }
 
       it "should delete a micropost" do
-        expect { click_link "delete" }.should change(Micropost, :count).by(-1)
+        expect { click_link "delete"}.should change(Micropost, :count).by(-1)
+
       end
     end
 

@@ -22,8 +22,7 @@ class MicropostsController < ApplicationController
   private
 
     def correct_user
-      @micropost = current_user.microposts.where(:id => params[:id]).first
-    	
+      @micropost = current_user.microposts.where(:id => params[:id]).first    	
       redirect_to root_path unless current_user?(@micropost.user)
     end	
 end

@@ -1,13 +1,14 @@
 SampleApp::Application.routes.draw do
-  get "microposts/index"
-
-  get "microposts/create"
-
-  get "microposts/destroy"
-
- resources :users
+  
+ resources :users do
+    member do
+      get :following, :followers 
+    end
+    
+  end    
  resources :sessions, only: [:new, :create, :destroy]  
  resources :microposts, only: [:create, :destroy]
+ resources :relationships, only: [:create, :destroy]
 
   match '/about' => 'staticpages#about', :as => :about
   match '/help'  => 'staticpages#help' , :as => :help
@@ -19,6 +20,7 @@ SampleApp::Application.routes.draw do
   get '/signin' => 'sessions#new', :as => :signin
   match '/checkin' => 'sessions#create', :as => :checkin
   match '/signout' => 'sessions#destroy', :as => :signout, via: :delete
+
   #resources :staticpages
 
   # The priority is based upon order of creation:
