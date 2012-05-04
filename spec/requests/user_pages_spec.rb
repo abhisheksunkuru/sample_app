@@ -87,6 +87,8 @@ describe "UserPages" do
     before{visit user_path(user)}
     it{should have_selector('h1', :text => user.name)}
     it{should have_selector('title', :text => user.name)}
+    it{should have_link('following')}
+    it{should have_link('followed')}
 
     describe "microposts" do
       it {should have_content(m1.content)}

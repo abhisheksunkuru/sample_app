@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   end  
 
   def following?(other_user)
-    debugger
+    
     relationships.find_by_followed_id(other_user.id)
   end 
 

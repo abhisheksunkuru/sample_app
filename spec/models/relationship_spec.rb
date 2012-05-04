@@ -36,5 +36,18 @@ describe Relationship do
   	before{ relationship.follower_id = nil}
   	it {should_not be_valid}
   end	
+
+  
+
+ describe "should destroy associated relationship" do
+   it "xxxx" do
+     relationship.should_not be_blank
+     follower.relationships.size.should == 1
+     follower.destroy
+     follower.relationships.size.should == 0
+     end
+  end  
+
+
  
 end
