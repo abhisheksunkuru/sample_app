@@ -1,18 +1,19 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-group :test do
- gem 'rspec-rails'
- gem 'guard-rspec'
- 
+
+
  #gem 'annotate'
  gem 'bcrypt-ruby'
  gem 'factory_girl_rails'
-gem "cucumber-rails"
-end
+
+ gem 'mysql2'
+
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -34,10 +35,16 @@ gem 'rb-inotify'
 gem 'libnotify'
 gem 'guard-spork'
 gem 'spork'
-gem 'pg'
+#gem 'pg'
 gem 'debugger'
 
 gem "database_cleaner"
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
