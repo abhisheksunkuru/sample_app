@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+require 'factory_girl_rails'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
@@ -24,24 +25,24 @@ end
 # particular, require'ing any 3rd-party gems that you don't normally modify
 # during development.
 #
-# The Spork.each_run block is run each time you run your specs.  In case you
+# The Spork.each_run block is run each time you run your specs. In case you
 # need to load files that tend to change during development, require them here.
 # With Rails, your application modules are loaded automatically, so sometimes
 # this block can remain empty.
 #
 # Note: You can modify files loaded *from* the Spork.each_run block without
-# restarting the spork server.  However, this file itself will not be reloaded,
+# restarting the spork server. However, this file itself will not be reloaded,
 # so if you change any of the code inside the each_run block, you still need to
-# restart the server.  In general, if you have non-trivial code in this file,
+# restart the server. In general, if you have non-trivial code in this file,
 # it's advisable to move it into a separate file so you can easily edit it
-# without restarting spork.  (For example, with RSpec, you could move
+# without restarting spork. (For example, with RSpec, you could move
 # non-trivial code into a file spec/support/my_helper.rb, making sure that the
 # spec/support/* files are require'd from inside the each_run block.)
 #
 # Any code that is left outside the two blocks will be run during preforking
 # *and* during each_run -- that's probably not what you want.
 #
-# These instructions should self-destruct in 10 seconds.  If they don't, feel
+# These instructions should self-destruct in 10 seconds. If they don't, feel
 # free to delete them.
 
 
@@ -79,15 +80,8 @@ RSpec.configure do |config|
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
-  config.include Capybara::DSL
 end
 
 Spork.each_run do
 
-end
-Capybara.configure do |config|
-      config.match = :one
-      config.exact_options = true
-      config.ignore_hidden_elements = true
-      config.visible_text_only = true
 end
